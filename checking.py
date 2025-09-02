@@ -1,48 +1,9 @@
 import csv
 import pyperclip
+from parse import getData
 
 # File path to your CSV file
 csv_file = 'files/checking.csv'
-
-def getData(description):
-    category = ""
-
-    if "PADDLE.NET* SMART " in description:
-        return "Smart Proxy", "Computing"
-    if "PRIVATEPROXY" in description:
-        return "VA Private Proxy", "VAs"
-    if "LUCKNOW" in description:
-        return "Bought Accounts", "Accounts"
-    if "CONG TY TNHH" in description:
-        return "Bought Followers", "Accounts"
-    if "FACEBK" in description:
-        return "Facebook Ads", "Advertising"
-    if "GOOGLE *CLOUD" in description:
-        return "Google Cloud", "Computing"
-    if "MONGODBCLOUD ENJ" in description:
-        return "DataBase", "Computing"
-    if "OPENAI" in description:
-        return "Open Ai", "Computing"
-    if "INTUIT" in description:
-        return "Quickbooks", "Subscriptions"
-    if "Zelle payment to EVAN HITE" in description:
-        return "Paid Evan", "Personal Payouts"
-    if "CALENDLY" in description:
-        return "Calenderly", "Subscriptions"
-    if "APIFY*" in description:
-        return "Apify", "Subscriptions"
-    if "ZOOM.US" in description:
-        return "Zoom", "Subscriptions"
-    if "SLACK" in description:
-        return "Slack", "Subscriptions"
-    if "HIGHLEVEL" in description:
-        return "GHL", "Subscriptions" 
-    if "ZOOM.COM" in description:
-        return "Zoom", "Subscriptions"
-    if "IMPRESS SOCIA" in description:
-        return "Ads Manager", "Advertising"
-
-    return description, category
 
 # Columns in the output: Date, Category (blank), Description, Amount
 output_data = []
