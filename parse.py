@@ -1,8 +1,12 @@
 def getData(description):
-    category = ""
+    category = "Uncategorized"
 
     if "PADDLE.NET* SMART " in description or "SMARTPRO" in description:
         return "Smart Proxy", "Computing"
+    if "MULTILOGIN" in description:
+        return "Multilogin", "Computing"
+    if "FIGMA" in description:
+        return "Figma", "Computing"
     if "PRIVATEPROXY" in description:
         return "VA Private Proxy", "VAs"
     if "LUCKNOW" in description:
